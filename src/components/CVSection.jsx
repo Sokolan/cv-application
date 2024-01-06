@@ -2,12 +2,12 @@ import GeneralInfoCV from "./GeneralInfoCV";
 import EducationCV from "./EducationCV";
 import ExperieneCV from "./ExperienceCV";
 
-export default function CVSection({GeneralInfo}) {
+export default function CVSection({ GeneralInfo, Education, Experience }) {
   return (
     <>
       <GeneralInfoCV GeneralInfo={GeneralInfo} />
-      <EducationCV />
-      <ExperieneCV />
+      <EducationCV Education={Education} />
+      <ExperieneCV Experience={Experience} />
     </>
   );
 }

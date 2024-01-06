@@ -1,7 +1,4 @@
-export default function GerneralInfoEdit({GeneralInfoHandler}) {
-  // function nameChangeHandler(e) {
-  //   GeneralInfoHandler({...e.target.value});
-  // }
+export default function GerneralInfoEdit({ GeneralInfoHandler }) {
   return (
     <>
       <h1>General Information</h1>
@@ -10,7 +7,10 @@ export default function GerneralInfoEdit({GeneralInfoHandler}) {
       <label>Email</label>
       <input type="email" onChange={(e) => GeneralInfoHandler(e, "email")} />
       <label>Phone Number</label>
-      <input type="tel" onChange={(e) => GeneralInfoHandler(e, "phoneNumber")} />
+      <input
+        type="tel"
+        onChange={(e) => GeneralInfoHandler(e, "phoneNumber")}
+      />
     </>
   );
 }
