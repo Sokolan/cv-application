@@ -1,9 +1,9 @@
-export default function EducationCV({ Education }) {
+export default function EducationCV({ education }) {
   return (
-    <>
+    <div className="educationCv">
       <h1>Education</h1>
       <ul>
-        {Education.map((education) => (
+        {education.map((education) => (
           <li key={education.id}>
             {education.schoolName}
             {education.title}
@@ -12,6 +12,6 @@ export default function EducationCV({ Education }) {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

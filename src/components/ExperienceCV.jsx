@@ -1,9 +1,9 @@
-export default function ExpereinceCV({ Experience }) {
+export default function ExperienceCV({ experience }) {
   return (
-    <>
+    <div className="experienceCv">
       <h1>Experience</h1>
       <ul>
-        {Experience.map((experience) => (
+        {experience.map((experience) => (
           <li key={experience.id}>
             {experience.title}
             {experience.company}
@@ -13,6 +13,6 @@ export default function ExpereinceCV({ Experience }) {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

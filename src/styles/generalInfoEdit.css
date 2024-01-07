@@ -1,0 +1,10 @@
+.generalInfoEdit {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 4px;
+}
+
+.generalInfoEdit > input {
+  width: 50%;
+}

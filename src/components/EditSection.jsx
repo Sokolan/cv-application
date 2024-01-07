@@ -1,25 +1,26 @@
 import GerneralInfoEdit from "./GeneralInfoEdit";
 import EducationEdit from "./EducationEdit";
 import ExperienceEdit from "./ExperienceEdit";
+import "../styles/editSection.css";
 
 export default function EditSection({
-  GeneralInfoHandler,
-  EducationHandler,
-  Education,
-  ExperienceHandler,
-  Experience,
+  generalInfoHandler,
+  educationHandler,
+  education,
+  experienceHandler,
+  experience,
 }) {
   return (
-    <>
-      <GerneralInfoEdit GeneralInfoHandler={GeneralInfoHandler} />
+    <div className="editSection">
+      <GerneralInfoEdit generalInfoHandler={generalInfoHandler} />
       <EducationEdit
-        EducationHandler={EducationHandler}
-        Education={Education}
+        educationHandler={educationHandler}
+        education={education}
       />
       <ExperienceEdit
-        ExperienceHandler={ExperienceHandler}
-        Experience={Experience}
+        experienceHandler={experienceHandler}
+        experience={experience}
       />
-    </>
+    </div>
   );
 }

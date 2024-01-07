@@ -1,13 +1,14 @@
 import GeneralInfoCV from "./GeneralInfoCV";
 import EducationCV from "./EducationCV";
 import ExperieneCV from "./ExperienceCV";
+import "../styles/cvSection.css";
 
-export default function CVSection({ GeneralInfo, Education, Experience }) {
+export default function CVSection({ generalInfo, education, experience }) {
   return (
-    <>
-      <GeneralInfoCV GeneralInfo={GeneralInfo} />
-      <EducationCV Education={Education} />
-      <ExperieneCV Experience={Experience} />
-    </>
+    <div className="cvSection">
+      <GeneralInfoCV generalInfo={generalInfo} />
+      <EducationCV education={education} />
+      <ExperieneCV experience={experience} />
+    </div>
   );
 }

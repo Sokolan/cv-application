@@ -20,7 +20,7 @@ function getExperienceWithChangedValue(changed, oldExperience, newValue) {
   return changed === "Title"
     ? { ...oldExperience, title: newValue }
     : changed === "Company"
-      ? { ...oldExperience, Company: newValue }
+      ? { ...oldExperience, company: newValue }
       : changed === "DateFrom"
         ? { ...oldExperience, dateFrom: newValue }
         : changed === "DateTo"
@@ -80,7 +80,6 @@ function App() {
   }
 
   function experienceHandler(mode, changedExperience = null, newValue = null) {
-    console.log("a");
     if (mode === "add") {
       setExperience(
         experience.concat([
@@ -94,7 +93,6 @@ function App() {
           },
         ]),
       );
-      console.log("b");
     } else if (mode === "delete") {
       setExperience(
         experience.filter((experience) => experience.id !== changedExperience),
@@ -113,20 +111,20 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app">
       <EditSection
-        GeneralInfoHandler={generalInfoHandler}
-        EducationHandler={educationHandler}
-        Education={education}
-        ExperienceHandler={experienceHandler}
-        Experience={experience}
+        generalInfoHandler={generalInfoHandler}
+        educationHandler={educationHandler}
+        education={education}
+        experienceHandler={experienceHandler}
+        experience={experience}
       ></EditSection>
       <CVSection
-        GeneralInfo={generalInfo}
-        Education={education}
-        Experience={experience}
+        generalInfo={generalInfo}
+        education={education}
+        experience={experience}
       ></CVSection>
-    </>
+    </div>
   );
 }
 

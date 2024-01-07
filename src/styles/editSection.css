@@ -1,0 +1,16 @@
+.editSection h1 {
+  text-decoration: underline;
+  margin: 8px;
+}
+
+.editSection > div {
+  border: 1px solid rgb(99, 99, 99);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.editSection button {
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid rgb(67, 67, 67);
+}
