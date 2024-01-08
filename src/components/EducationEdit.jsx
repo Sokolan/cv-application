@@ -4,7 +4,12 @@ export default function EducationEdit({ educationHandler, education }) {
   return (
     <div className="educationEdit">
       <h1>Education</h1>
-      <button onClick={() => educationHandler("add", null)}>+</button>
+      <button
+        className="addEducation"
+        onClick={() => educationHandler("add", null)}
+      >
+        Add Education
+      </button>
       <ul>
         {education.map((education) => (
           <li key={education.id}>
@@ -22,21 +27,34 @@ export default function EducationEdit({ educationHandler, education }) {
                 educationHandler("editTitle", education.id, e.target.value)
               }
             />
-            <label>From</label>
-            <input
-              type="date"
-              onChange={(e) =>
-                educationHandler("editDateFrom", education.id, e.target.value)
-              }
-            />
-            <label>Till</label>
-            <input
-              type="date"
-              onChange={(e) =>
-                educationHandler("editDateTo", education.id, e.target.value)
-              }
-            />
-            <button onClick={() => educationHandler("delete", education.id)}>
+            <div className="educationEditDates">
+              <div className="educationEditDateFrom">
+                <label>From</label>
+                <input
+                  type="date"
+                  onChange={(e) =>
+                    educationHandler(
+                      "editDateFrom",
+                      education.id,
+                      e.target.value,
+                    )
+                  }
+                />
+              </div>
+              <div className="educationEditDateTill">
+                <label>Till</label>
+                <input
+                  type="date"
+                  onChange={(e) =>
+                    educationHandler("editDateTo", education.id, e.target.value)
+                  }
+                />
+              </div>
+            </div>
+            <button
+              className="deleteEducation"
+              onClick={() => educationHandler("delete", education.id)}
+            >
               Delete
             </button>
           </li>

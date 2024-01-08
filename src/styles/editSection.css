@@ -1,3 +1,10 @@
+.editSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* width: ; */
+}
+
 .editSection h1 {
   text-decoration: underline;
   margin: 8px;
@@ -10,7 +17,7 @@
 }
 
 .editSection button {
-  padding: 4px;
+  padding: 8px 16px;
   border-radius: 8px;
   border: 1px solid rgb(67, 67, 67);
 }
