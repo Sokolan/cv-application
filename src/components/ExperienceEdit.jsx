@@ -1,8 +1,10 @@
+import "../styles/experienceEdit.css";
+
 export default function ExperienceEdit({ experienceHandler, experience }) {
   return (
     <div className="experienceEdit">
       <h1>Experience</h1>
-      <button onClick={() => experienceHandler("add")}>+</button>
+      <button onClick={() => experienceHandler("add")}>Add Experience</button>
       <ul>
         {experience.map((experience) => (
           <li key={experience.id}>
@@ -20,20 +22,34 @@ export default function ExperienceEdit({ experienceHandler, experience }) {
                 experienceHandler("editCompany", experience.id, e.target.value)
               }
             />
-            <label>From</label>
-            <input
-              type="date"
-              onChange={(e) =>
-                experienceHandler("editDateFrom", experience.id, e.target.value)
-              }
-            />
-            <label>Till</label>
-            <input
-              type="date"
-              onChange={(e) =>
-                experienceHandler("editDateTo", experience.id, e.target.value)
-              }
-            />
+            <div className="datesEditExperience">
+              <div className="dateFromEditExperience">
+                <label>From</label>
+                <input
+                  type="date"
+                  onChange={(e) =>
+                    experienceHandler(
+                      "editDateFrom",
+                      experience.id,
+                      e.target.value,
+                    )
+                  }
+                />
+              </div>
+              <div className="dateTillEditExperience">
+                <label>Till</label>
+                <input
+                  type="date"
+                  onChange={(e) =>
+                    experienceHandler(
+                      "editDateTo",
+                      experience.id,
+                      e.target.value,
+                    )
+                  }
+                />
+              </div>
+            </div>
             <label>Description</label>
             <input
               type="text"
@@ -45,7 +61,10 @@ export default function ExperienceEdit({ experienceHandler, experience }) {
                 )
               }
             />
-            <button onClick={() => experienceHandler("delete", experience.id)}>
+            <button
+              className="experienceDelete"
+              onClick={() => experienceHandler("delete", experience.id)}
+            >
               Delete
             </button>
           </li>

@@ -4,6 +4,7 @@
   align-items: baseline;
   gap: 20px 20px;
   padding: 0;
+  margin: 8px;
 }
 
 .educationEdit li {
@@ -27,4 +28,9 @@
 
 .deleteEducation {
   margin-top: 8px;
+}
+
+.addEducation {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
