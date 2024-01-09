@@ -1,3 +1,5 @@
+import "../styles/cvExperience.css";
+
 export default function ExperienceCV({ experience }) {
   return (
     <div className="experienceCv">
@@ -5,11 +7,15 @@ export default function ExperienceCV({ experience }) {
       <ul>
         {experience.map((experience) => (
           <li key={experience.id}>
-            {experience.title}
-            {experience.company}
-            {experience.dateFrom}
-            {experience.dateTo}
-            {experience.description}
+            <div className="experienceBasicInformation">
+              <p>
+                {experience.title},&nbsp;{experience.company}
+              </p>
+              <p className="experienceDates">
+                {experience.dateFrom}&nbsp;-&nbsp;{experience.dateTo}
+              </p>
+            </div>
+            <p>{experience.description}</p>
           </li>
         ))}
       </ul>

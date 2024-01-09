@@ -51,8 +51,10 @@ export default function ExperienceEdit({ experienceHandler, experience }) {
               </div>
             </div>
             <label>Description</label>
-            <input
+            <textarea
               type="text"
+              rows="6"
+              className="experienceEditDescription"
               onChange={(e) =>
                 experienceHandler(
                   "editDescription",

@@ -1,10 +1,9 @@
 export default function GeneralInfoCV({ generalInfo }) {
   return (
     <div className="generalInfoCv">
-      <p>
-        {generalInfo.name}
-        {generalInfo.email}
-        {generalInfo.phoneNumber}
+      <h1>{generalInfo.name}</h1>
+      <p className="contactInformation">
+        {generalInfo.email} {generalInfo.phoneNumber}
       </p>
     </div>
   );

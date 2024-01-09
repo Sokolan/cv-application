@@ -1,0 +1,13 @@
+.educationCv ul {
+  padding: 0;
+}
+
+.educationCv li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.educationInformation {
+  display: flex;
+  gap: 8px;
+}

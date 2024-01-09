@@ -1,3 +1,14 @@
-ul {
-    list-style-type: none;
-} 
+.cvSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  gap: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 50vw;
+  padding: 24px;
+}
+
+.cvSection h1 {
+  margin: 0;
+}

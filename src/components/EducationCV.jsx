@@ -1,3 +1,5 @@
+import "../styles/cvEducation.css";
+
 export default function EducationCV({ education }) {
   return (
     <div className="educationCv">
@@ -5,10 +7,13 @@ export default function EducationCV({ education }) {
       <ul>
         {education.map((education) => (
           <li key={education.id}>
-            {education.schoolName}
-            {education.title}
-            {education.dateFrom}
-            {education.dateTo}
+            <div className="educationInformation">
+              <p>{education.schoolName},</p>
+              <p>{education.title}</p>
+            </div>
+            <p>
+              {education.dateFrom}&nbsp;- &nbsp;{education.dateTo}
+            </p>
           </li>
         ))}
       </ul>

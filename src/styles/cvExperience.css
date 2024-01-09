@@ -1,0 +1,14 @@
+.experienceCv ul {
+  padding: 0;
+}
+
+.experienceCv li {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.experienceBasicInformation {
+  display: flex;
+  justify-content: space-between;
+}
